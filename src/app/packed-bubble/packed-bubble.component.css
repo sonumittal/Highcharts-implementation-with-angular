@@ -1,0 +1,11 @@
+/* .bubble_chart .highcharts-packedbubble-series .highcharts-point-select {
+    stroke: #fff!important;
+    stroke-width: 5 !important;
+} */
+
+
+::ng-deep .highcharts-point-select {
+    stroke: rgb(202, 53, 78);
+    stroke-width: 3px !important;
+    fill:green;
+}

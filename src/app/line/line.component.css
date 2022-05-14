@@ -1,0 +1,10 @@
+
+::ng-deep .highcharts-point-select {
+    stroke: rgb(202, 53, 78);
+    stroke-width: 3px !important;
+    /* fill:green; */
+}
+
+a{
+    cursor: pointer;
+}

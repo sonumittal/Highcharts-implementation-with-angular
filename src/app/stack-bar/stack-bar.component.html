@@ -1,0 +1,150 @@
+<div class="container mt-5">
+    <!-- --------------------------nav ------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Apples')" >Apples</a>
+              </li> 
+                 <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Oranges')">Oranges</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Pears')">Pears</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Grapes')">Grapes</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Bananas')">Bananas</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Pineapple')">Pineapple</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Mango')">Mango</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Coconut')">Coconut</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Guava')">Guava</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack('Almond')">Almond</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(10)">10</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(11)">11</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(12)">12</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(13)">13</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(14)">14</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(15)">15</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(16)">16</a>
+              </li> <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(17)">17</a>
+              </li>  <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(18)">18</a>
+              </li>   <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(19)">19</a>
+              </li>   <li class="nav-item">
+                <a class="nav-link" routerLinkActive="active-link" (click)="selectStack(20)">20</a>
+              </li>
+             </ul>
+          </div>
+      </nav>
+     
+    
+    <!-- --------------------------end of nav ------------------------------------------>
+    <div class="row">
+      <div class="header-2-colum d-flex p-0" id="Filter_icon">
+        <div class="dropdown label_icon" style="border-bottom:1px solid #f1f1f1;">
+            <div id="filterSelection">Top 5 </div>
+            <img src="assets/images/filter1.svg" id="Label_icon" (click)="filterModal()" data-bs-toggle="dropdown"
+                aria-expanded="false"  >
+
+            <div class="shadow p-2 time_list2 filter_oo " aria-labelledby="time_list2"
+                style="width:320px;margin-right:-100px">
+                <div class="filter-heading">Filter</div>
+                <div class="filter-options" id="filterOptions">
+                    <div class="w-100 p-3 py-1 pb-0">
+                        <input type="radio" id="all" value="all" name="filter">
+                        <label for="all" class="ps-2">All</label>
+                    </div>
+                    <div class="w-100 p-3 py-1 pb-0">
+                        <input type="radio" id="top-20" value="top20" name="filter" checked>
+                        <label for="top-20" class="ps-2">Top 5</label>
+                    </div>
+                    <div class="w-100 p-3 py-1 pb-0">
+                        <input type="radio" id="bottom-20" value="bottom20" name="filter">
+                        <label for="bottom-20" class="ps-2">Bottom 5</label>
+                    </div>
+                    <div class="w-100 d-flex p-3 py-1 pb-0">
+                        <div class="w-50">
+                            <input type="radio" id="Greater_than" value="gt" name="filter">
+                            <label for="Greater_than" class="ps-2">Greater Than</label>
+                        </div>
+                        <div class="w-50 row  ">
+                            <div class="w-50 ps-0">
+                                <input type="text" id="grt" name="gt" (keypress)="isNumberKey($event)" class="w-100"  disabled="disabled"   />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex p-3 py-1">
+                        <div class="w-50">
+                            <input type="radio" id="Less_than" value="lt" name="filter">
+                            <label for="Less_than" class="ps-2">Less Than</label>
+                        </div>
+                        <div class="w-50 row  ">
+                            <div class="w-50 ps-0">
+                                <input type="text" id="les" name="lt" (keypress)="isNumberKey($event)" class="w-100"  disabled="disabled"   />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 d-flex align-items-center p-3 py-1">
+                        <div class="w-50">
+                            <input type="radio" id="btw" value="bt" name="filter">
+                            <label for="btw" class="ps-2">Between</label>
+                        </div>
+                        <div class="w-50 row   align-items-center position-relative" style="top:-15px">
+                            <div class="col-6 ps-0">
+                                <label for="btw-fr" class="label">From</label>
+                                <input type="text" id="btw-fr" name="fr" (keypress)="isNumberKey($event)" class="w-100"   disabled="disabled"  />
+                            </div>
+                            <div class="col-6 pe-0">
+                                <label for="btw-to" class="label">To</label>
+                                <input type="text" name="to" id="btw-to" (keypress)="isNumberKey($event)" class="w-100"  disabled="disabled"  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="filter-heading2">
+                    <label class="label-small w-100">Minimum Value - <b> <span id="minRange"></span></b></label>
+                    <label class="label-small w-100">Maximum Value - <b> <span id="maxRange"></span></b></label>
+                </div> -->
+                <div class="filter-options">
+                    <div class="w-100 p-3 pb-2 text-center">
+                        <button type="button" class="btn btn-primary mx-auto" id="btnApply">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+    </div>
+    </div>
+        <div id="container"></div> 
+        <p class="highcharts-description">
+            Chart showing stacked horizontal bars. This type of visualization is
+            great for comparing data that accumulates up to a sum.
+        </p>
+    </div>
+
+    <!-- <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Chart showing stacked horizontal bars. This type of visualization is
+            great for comparing data that accumulates up to a sum.
+        </p>
+    </figure> -->

@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">HIGHCHARTS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active2" aria-current="page" routerLink="/" (click)="myHome()" routerLinkActive="active-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="line" routerLinkActive="active-link" (click)="active('1')">Line</a>
+          </li> 
+             <li class="nav-item">
+            <a class="nav-link" routerLink="area" routerLinkActive="active-link">Area</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="column" routerLinkActive="active-link">Column</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="bar" routerLinkActive="active-link">Bar</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="pie" routerLinkActive="active-link">Pie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="scatter" routerLinkActive="active-link">Scatter</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="bubble" routerLinkActive="active-link">Bubble</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="packedBubble" routerLinkActive="active-link">Packed Bubble</a>
+          </li> 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select in Packed Bubble
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="selectArea('India')" routerLinkActive="active-link">India</a>
+              <a class="dropdown-item" (click)="selectArea('Azerbaijan')" routerLinkActive="active-link">Azerbaijan</a>
+              <a class="dropdown-item" (click)="selectArea('France')" routerLinkActive="active-link">France</a>
+              <a class="dropdown-item" (click)="selectArea('Italy')" routerLinkActive="active-link">Italy</a>
+              <a class="dropdown-item" (click)="selectArea('Germany')" routerLinkActive="active-link">Germany</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="splitPackedBubble" routerLinkActive="active-link">Split Packed Bubble</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="stack-bar" routerLinkActive="active-link">Stack-bar</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" routerLink="synchronized" routerLinkActive="active-link">Synchronized</a>
+          </li>
+         
+         </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="text-center">
+    <img src={{link1}}  class="rounded" alt="...">
+  </div> -->
+  
+  
+ 
